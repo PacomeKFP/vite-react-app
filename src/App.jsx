@@ -1,3 +1,8 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
 import { useState } from 'react';
 import { AlertCircle, ArrowLeft, Send } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -78,4 +83,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App
