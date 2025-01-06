@@ -1,11 +1,5 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
 import { useState } from 'react';
 import { AlertCircle, ArrowLeft, Send } from 'lucide-react';
-import { Alert, AlertDescription } from '@/components/ui/alert';
 
 const App = () => {
   const [email, setEmail] = useState('');
@@ -27,8 +21,8 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-xl w-full max-w-md p-8">
+    <div className="w-screen h-screen bg-gradient-to-b from-white to-blue-100 flex items-center justify-center">
+      <div className="w-full max-w-md mx-4 bg-white rounded-lg shadow-xl p-8">
         <div className="flex items-center mb-6">
           <button className="text-red-600 hover:text-red-700 transition-colors">
             <ArrowLeft className="h-5 w-5" />
@@ -55,10 +49,10 @@ const App = () => {
               </div>
 
               {error && (
-                <Alert variant="destructive" className="bg-red-50 text-red-600 border-red-200">
+                <div className="bg-red-50 text-red-600 p-3 rounded-lg flex items-center gap-2">
                   <AlertCircle className="h-4 w-4" />
-                  <AlertDescription>{error}</AlertDescription>
-                </Alert>
+                  <p>{error}</p>
+                </div>
               )}
 
               <button
@@ -83,4 +77,4 @@ const App = () => {
   );
 };
 
-export default App
+export default App;
