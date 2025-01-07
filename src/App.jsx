@@ -24,7 +24,7 @@ const App = () => {
     <div className="w-screen h-screen bg-gradient-to-b from-white to-blue-100 flex items-center justify-center">
       <div className="w-full max-w-md mx-4 bg-white rounded-lg shadow-xl p-8">
         <div className="flex items-center mb-6">
-          <button className="text-red-600 hover:text-red-700 transition-colors">
+          <button onClick={()=>setSubmitted(false)} className="text-red-600 hover:text-red-700 transition-colors">
             <ArrowLeft className="h-5 w-5" />
           </button>
           <h1 className="text-red-600 text-2xl font-bold text-center flex-grow">LeJangui</h1>
